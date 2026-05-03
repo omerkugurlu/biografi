@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benim Bio - Evcil Hayvan</title>
+    <!-- Tailwind CSS (CDN kullanarak direkt çalışır) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #fffaf0; /* Evcil hayvan teması için sıcak bir arka plan rengi */
+        }
+        .action-button {
+            transition: all 0.3s ease;
+        }
+        .action-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .promo-gradient {
+            background: linear-gradient(135deg, #f97316 0%, #fbbf24 100%); /* Turuncu/Sarı degrade */
+        }
+        .whatsapp-bg {
+            background: #25D366;
+        }
+        .phone-bg {
+            background: #ef4444; /* Acil arama için kırmızı */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center p-4 sm:p-8">
+
+    <!-- Profil Bölümü -->
+    <div class="w-full max-w-md bg-white rounded-3xl shadow-sm p-8 flex flex-col items-center mt-4 border border-orange-100 relative overflow-hidden">
+        <!-- Arka plan pati efekti -->
+        <div class="absolute top-0 right-0 p-4 opacity-10">
+            <i data-lucide="paw-print" class="w-24 h-24 text-orange-500 transform rotate-12"></i>
+        </div>
+        
+        <div class="relative w-32 h-32 mb-4">
+            <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-orange-400 shadow-lg relative z-10">
+                <!-- Evcil Hayvan Örnek Fotoğrafı -->
+                <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Tarçın" class="w-full h-full object-cover">
+            </div>
+        </div>
+        <h1 class="text-2xl font-extrabold text-gray-900 flex items-center gap-2">
+            Tarçın <i data-lucide="paw-print" class="w-5 h-5 text-orange-500"></i>
+        </h1>
+        <p class="text-gray-500 font-medium text-sm mt-1">Golden Retriever</p>
+        
+        <!-- Karşılama Mesajı -->
+        <div class="bg-orange-50 text-orange-800 p-4 rounded-xl mt-4 w-full text-center border border-orange-100">
+            <p class="text-sm font-bold">Merhaba! Benim adım Tarçın 🐾</p>
+            <p class="text-xs mt-1">Eğer tek başımaysam aşağıdaki butonlardan aileme ulaşabilirsiniz.</p>
+        </div>
+    </div>
+
+    <!-- Hızlı İletişim Butonları -->
+    <div class="w-full max-w-md mt-6 grid grid-cols-2 gap-3">
+        <!-- Sahibimi Ara -->
+        <a href="tel:+905488209894" class="action-button bg-white p-4 rounded-2xl shadow-sm border border-red-100 flex flex-col items-center justify-center gap-2">
+            <div class="w-12 h-12 rounded-full phone-bg flex items-center justify-center shadow-md">
+                <i data-lucide="phone-call" class="w-6 h-6 text-white"></i>
+            </div>
+            <span class="text-sm font-bold text-gray-800 mt-1">Sahibimi Ara</span>
+        </a>
+        
+        <!-- WhatsApp -->
+        <a href="https://wa.me/905488209894?text=Merhaba,%20köpeğiniz%20Tarçın'ı%20buldum." target="_blank" class="action-button bg-white p-4 rounded-2xl shadow-sm border border-green-100 flex flex-col items-center justify-center gap-2">
+            <div class="w-12 h-12 rounded-full whatsapp-bg flex items-center justify-center shadow-md">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+            </div>
+            <span class="text-sm font-bold text-gray-800 mt-1">WhatsApp'tan Yaz</span>
+        </a>
+    </div>
+
+    <!-- Hakkımda Bilgiler -->
+    <div class="w-full max-w-md bg-white rounded-2xl shadow-sm p-6 mt-6 border border-gray-100">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <i data-lucide="info" class="w-5 h-5 text-orange-500"></i>
+            Hakkımda Bilgiler
+        </h2>
+        <div class="space-y-3">
+            <div class="flex justify-between items-center py-2 border-b border-gray-50">
+                <span class="text-sm text-gray-500">Yaş</span>
+                <span class="text-sm font-bold text-gray-800">3 Yaşında</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-gray-50">
+                <span class="text-sm text-gray-500">Cinsiyet</span>
+                <span class="text-sm font-bold text-gray-800">Erkek</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-gray-50">
+                <span class="text-sm text-gray-500">Mikroçip No</span>
+                <span class="text-sm font-bold text-gray-800">TR-9876543210</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-gray-50">
+                <span class="text-sm text-gray-500">Ev Adresi</span>
+                <span class="text-sm font-bold text-gray-800">Kadıköy / İstanbul</span>
+            </div>
+            <div class="flex justify-between items-center py-2">
+                <span class="text-sm text-gray-500">Karakter</span>
+                <span class="text-sm font-bold text-gray-800 text-right">Çok uysal, insan canlısı</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sağlık Bilgileri & Uyarılar -->
+    <div class="w-full max-w-md bg-white rounded-2xl shadow-sm p-6 mt-4 border border-gray-100">
+        <h2 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <i data-lucide="heart-pulse" class="w-5 h-5 text-red-500"></i>
+            Sağlık & Uyarılar
+        </h2>
+        <ul class="space-y-3">
+            <li class="flex items-start gap-2 bg-orange-50 p-3 rounded-lg border border-orange-100">
+                <i data-lucide="alert-triangle" class="w-5 h-5 text-orange-500 shrink-0"></i>
+                <span class="text-sm text-gray-700">Tavuk etine <b>alerjisi vardır</b>. Lütfen sadece kuru mama veya et verin.</span>
+            </li>
+            <li class="flex items-start gap-2 bg-green-50 p-3 rounded-lg border border-green-100">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i>
+                <span class="text-sm text-gray-700">Tüm aşıları tamdır, kuduz aşısı yapılmıştır. Endişe etmeyin.</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- REKLAM ALANI (nfc-anahtarlik.netlify.app uyarlaması) -->
+    <div class="w-full max-w-md mt-8">
+        <a href="https://nfc-anahtarlik.netlify.app/" target="_blank" class="block promo-gradient p-6 rounded-3xl shadow-lg relative overflow-hidden group">
+            <div class="absolute -right-4 -top-4 opacity-20 transform rotate-12 transition-transform group-hover:scale-110">
+                <i data-lucide="nfc" class="w-32 h-32 text-white"></i>
+            </div>
+            
+            <div class="relative z-10">
+                <span class="bg-white/30 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm">Evcil Hayvanlar İçin NFC</span>
+                <h2 class="text-white text-xl font-bold mt-2">Dostunuz Güvende Olsun!</h2>
+                <p class="text-orange-50 text-sm mt-1 opacity-90">NFC Akıllı Tasmalık ile evcil hayvanınızın bilgilerini tek dokunuşla paylaşın.</p>
+                
+                <div class="mt-4 inline-flex items-center bg-white text-orange-500 px-4 py-2 rounded-xl font-bold text-sm shadow-md transition-transform hover:scale-105">
+                    Künyeleri İncele 
+                    <i data-lucide="arrow-right" class="w-4 h-4 ml-2 animate-bounce-x"></i>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Alt Bilgi -->
+    <footer class="mt-12 text-center text-gray-400 text-xs pb-10">
+        <p>&copy; 2026 NFC Anahtarlık. Tüm hakları saklıdır.</p>
+        <div class="mt-2 flex items-center justify-center gap-1">
+            <i data-lucide="nfc" class="w-4 h-4"></i>
+            <span>Akıllı Evcil Hayvan Künyesi Sistemi</span>
+        </div>
+    </footer>
+
+    <!-- Scriptler -->
+    <script>
+        // Lucide ikonlarını yükle
+        lucide.createIcons();
+    </script>
+
+    <style>
+        @keyframes bounce-x {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(5px); }
+        }
+        .animate-bounce-x {
+            animation: bounce-x 1s infinite;
+        }
+    </style>
+</body>
+</html>
